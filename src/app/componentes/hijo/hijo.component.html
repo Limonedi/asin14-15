@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">nombre</th>
+        <th scope="col">apellido</th>
+        <th scope="col">carrera</th>
+        <th scope="col">Eliminar</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nom of datos;let i=index">
+       <td>{{nom.nombreDos}}</td>
+       <td>{{nom.apellido}}</td>
+       <td>{{nom.carrera}}</td>
+       <td><button class="btn btn-primary" type="submit" (click)="eliminar(i)">eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>

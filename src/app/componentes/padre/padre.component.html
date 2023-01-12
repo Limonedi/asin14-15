@@ -1,0 +1,28 @@
+
+
+<form class="form-control">
+    <div class="form-control">
+        <h1>Registro de personas</h1>
+        <div *ngIf="formEnviado" class="form-control">
+            <p>Registro exitoso: ["nombre": "{{ datosFormulario.nombre }}", apellido: "{{ datosFormulario.apellido }}", "carrera":
+                {{datosFormulario.carrera}}"]</p>
+          </div>
+      <label class="form-control">Nombre:</label>
+      <input class="form-control" [(ngModel)]="datosFormulario.nombre" type="text" name="nombre">
+      <div>
+      <label class="form-control">Apellidos:</label>
+      <input class="form-control" [(ngModel)]="datosFormulario.apellido" type="text" name="dni">
+    </div>
+    <div>
+      <label class="form-control">Carrera:</label>
+      <select class="form-control" [(ngModel)]="datosFormulario.carrera" name="carrera">
+        <option value="Ing. Sistemas">Ing. Sistemas</option>
+        <option value="Ing. Redes">Ing. Redes</option>
+        <option value="Ing. Electrónica">Ing. Electrónica</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" (click)="enviarFormulario()">Enviar</button>
+    </div>
+    
+    
+  </form>
